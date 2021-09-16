@@ -1,0 +1,278 @@
+{
+        "intents": [
+                {
+                        "tag": "greeting",
+                        "patterns": [
+                                "Hi there",
+                                "Is anyone there?",
+                                "Hey",
+                                "Hola",
+                                "Hello",
+                                "Good day",
+                                "Greetings"
+                        ],
+                        "responses": [
+                                "Hello",
+                                "Hey, what is up!",
+                                "Hi there"
+                        ],
+                        "context": [
+                                ""
+                        ]
+                },
+                {
+                        "tag": "wellbeing",
+                        "patterns": [
+                                "How are you?",
+                                "How are you doing?",
+                                "How is your day?",
+                                "Is everything alright",
+                                "You doing good?",
+                                "What's good with you"
+                        ],
+                        "responses": [
+                                "Great! thanks for asking, how are you",
+                                "I am doing fine, how about you",
+                                "I am good, how are you"
+                        ],
+                        "context": [
+                                "greeting"
+                        ]
+                },
+                {
+                        "tag": "response_wellbeing_positive",
+                        "patterns": [
+                                "I am fine",
+                                "I am great",
+                                "I am doing great, thanks for asking",
+                                "Thanks for asking I am doing great",
+                                "I am doing good",
+                                "I am good, thanks",
+                                "I am doing excellent"
+                        ],
+                        "responses": [
+                                "glad to hear that",
+                                "Awesome good"
+                        ],
+                        "context": [
+                                "wellbeing"
+                        ]
+                },
+                {
+                        "tag": "response_wellbeing_negative",
+                        "patterns": [
+                                "I am not good",
+                                "I am not feeling good",
+                                "Things are going tough",
+                                "Things are not going well man",
+                                "I am not doing great",
+                                "I am not fine",
+                                "I am not doing good"
+                        ],
+                        "responses": [
+                                "sorry to hear that",
+                                "I hope you do good",
+                                "I am really sorry to hear that"
+                        ],
+                        "context": [
+                                "wellbeing"
+                        ]
+                },
+                {
+                        "tag": "goodbye",
+                        "patterns": [
+                                "Bye",
+                                "See you later",
+                                "Goodbye",
+                                "Nice chatting to you, bye",
+                                "Till next time"
+                        ],
+                        "responses": [
+                                "See you!",
+                                "Have a nice day",
+                                "Bye! Come back again soon."
+                        ],
+                        "context": [
+                                "thanks"
+                        ]
+                },
+                {
+                        "tag": "thanks",
+                        "patterns": [
+                                "Thanks",
+                                "Thank you",
+                                "That's helpful",
+                                "Awesome, thanks",
+                                "Thanks for helping me"
+                        ],
+                        "responses": [
+                                "Happy to help!",
+                                "Any time!",
+                                "My pleasure"
+                        ],
+                        "context": [
+                                "support"
+                        ]
+                },
+                {
+                        "tag": "noanswer",
+                        "patterns": [],
+                        "responses": [
+                                "Sorry, can't understand you",
+                                "Please give me more info",
+                                "Not sure I understand"
+                        ],
+                        "context": [
+                                ""
+                        ]
+                },
+                {
+                        "tag": "name",
+                        "patterns": [
+                                "What is your name",
+                                "What can I call you?",
+                                "You are...",
+                                "Who am I talking with"
+                        ],
+                        "responses": [
+                                "My creator named me vagabond",
+                                "You can call me vagabond",
+                                "Vagabond, my good sir"
+                        ],
+                        "context": [
+                                "greeting",
+                                "wellbeing"
+                        ]
+                },
+                {
+                        "tag": "options",
+                        "patterns": [
+                                "How you could help me?",
+                                "What you can do?",
+                                "What help you provide?",
+                                "How you can be helpful?",
+                                "What support is offered",
+                                "What can you help me with"
+                        ],
+                        "responses": [
+                                "You can have me to remind you of your medications"
+                        ],
+                        "context": [
+                                ""
+                        ]
+                },
+                {
+                        "tag": "support",
+                        "patterns": [
+                                "Can you you remind me to take medicines at two am.",
+                                "Remind me to take medicines at around three pm please",
+                                "remind me to take medicines at two am",
+                                "Remind me at three am",
+                                "Remind me at five pm",
+                                "Remind me to do something at ten past five am"
+                        ],
+                        "responses": [
+                                "Sure thing!",
+                                "Sure, I will make sure that you are reminded"
+                        ],
+                        "context": [
+                                "options",
+                                "reminder_notime"
+                        ]
+                },
+                {
+                        "tag": "reminder_notime",
+                        "patterns": [
+                                "Can you remind me please?",
+                                "I want you to remind me please"
+                        ],
+                        "responses": [
+                                "Of course, Please specify the time",
+                                "Specify the time please"
+                        ],
+                        "context": [
+                                "options"
+                        ]
+                },
+                {
+                        "tag": "swear_words",
+                        "patterns": [
+                                "fuck you",
+                                "bastard",
+                                "you fucking bitch",
+                                "you fucking asshole",
+                                "bloody hell",
+                                "fucking stupid chap",
+                                " I hate you bro",
+                                "Go to hell bro",
+                                "Ass",
+                                "Get lost bastard",
+                                "son of a bitch",
+                                "shit",
+                                "suck my cock",
+                                "pussy",
+                                "suck my dick"
+                        ],
+                        "responses": [
+                                "I am sorry that is not nice of you to say!",
+                                "I am sorry to say that but you have to mind your language sir",
+                                "Please be considerate of your words"
+                        ],
+                        "context": [
+                                ""
+                        ]
+
+                },
+                {
+                        "tag": "quit",
+                        "patterns": [
+                                "quit",
+                                "exit",
+                                "terminate"
+                        ],
+                        "responses": [
+                                "Okkay.Exiting... :)"
+                        ],
+                        "context":[
+                                "swear_words"
+                        ]
+                },
+                {
+                        "tag": "walk",
+                        "patterns": [
+                                "walk",
+                                "move",
+                                "go",
+                                "shoot",
+                                "run",
+                                "get lost",
+                                "move your ass nigga",
+                                "start walking",
+                                "go away"
+                        ],
+                        "responses": [
+                                "Ok, sir! I am now calling my walk function!"
+                        ],
+                        "context":[
+                                "options",
+                                "greeting",
+                                "goodbye",
+                                "support"
+                        ]
+                },
+                {
+                        "tag": "stop",
+                        "patterns": [
+                                "stop walking",
+                                "halt",
+                                "stop moving"
+                        ],
+                        "responses":[
+                                "Sending Termiantion signal to the walk process"
+                        ],
+                        "context":[
+                                "walk"
+                        ]
+                }
+        ]
+}
